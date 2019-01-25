@@ -74,7 +74,7 @@ $("li").click(function() {
         console.log("match");
 		$("li").children("img[src='" + guess2 + "']").addClass("match");
         $("li").children("img[src='" + guess2 + "']").after( $('<svg class="icon"><use xlink:href="#checkbox" /></svg>') );
-		
+			
 		//$('img:not(.match)').hide().removeClass("face-up");
 		
 		
@@ -87,11 +87,12 @@ $("li").click(function() {
           $("img").not(".match").hide();
           $("img").not(".match").removeClass("face-up");
         }, 1000);
-	  
       }
       
  		// reset
 		count = 0; 
+		guess1 = "";
+		guess2 = "";
       setTimeout(function() { console.clear(); }, 60000);      
     }
   }
